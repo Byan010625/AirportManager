@@ -12,8 +12,8 @@ import java.util.Random;
  */
 public class Gate implements Serializable {
 
-    String terminal;
-    String gate;
+    private String terminal;
+    private String gate;
 
     public Gate() {
 

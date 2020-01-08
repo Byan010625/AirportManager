@@ -1,5 +1,6 @@
 import java.io.Serializable;
 import java.util.Random;
+
 /**
  * Project 5 - Gate.java
  *
@@ -8,7 +9,7 @@ import java.util.Random;
  * N/A
  *
  * @author Benjamin Yan, Vamsi Kolluri
- * @version November 20, 2019
+ * @version December 2, 2019
  */
 public class Gate implements Serializable {
 

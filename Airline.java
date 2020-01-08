@@ -4,25 +4,20 @@ import java.util.ArrayList;
 /**
  * Project 5 - Airline.java
  *
- * Interface for the three airlines
+ * The 3 airlines at Purdue Airport
  *
  * N/A
  *
  * @author Benjamin Yan, Vamsi Kolluri
- * @version November 20, 2019
+ * @version December 2, 2019
  */
 
 public interface Airline extends Serializable {
+    String getAirlineName();
 
-    String getName();
-    String getAmenities();
-    int getMaxPassengers();
-    int getNumPassengers();
-    ArrayList<Passenger> getPassengerList();
-    boolean isFull();
-    Gate getGate();
-    void addPassenger(Passenger passenger);
-    void removePassenger(Passenger passenger);
+    String getFlightNumber();
 
+    int numberOfSeats();
 
+    ArrayList<String> getPassengerStrings();
 }

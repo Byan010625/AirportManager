@@ -1,80 +1,65 @@
-/**
- * Project 5 - Southwest.java
- *
- * One of the three airlines
- *
- * N/A
- *
- * @author Benjamin Yan, Vamsi Kolluri
- * @version November 20, 2019
- */
 import java.util.ArrayList;
 
 /**
- * Project 5 - Delta.java
+ * Project 5 - Southwest.java
  *
- * One of the three airlines
+ * The Southwest Airline
  *
  * N/A
  *
  * @author Benjamin Yan, Vamsi Kolluri
- * @version November 20, 2019
+ * @version December 2, 2019
  */
 
 public class Southwest implements Airline {
+    private String airlineName;
+    private static String message;
+    private String flightNumber;
+    private int numberOfSeats;
+    private ArrayList<String> passengerStrings;
 
-    private String name;
-    private String amenities;
-    private int maxPassengers;
-    private int numPassengers;
-    private ArrayList<Passenger> passengerList;
-    private Gate gate;
-
-    public Southwest(String name, String amenities, int maxPassengers, Gate gate) {
-        this.name = name;
-        this.amenities = amenities;
-        this.maxPassengers = maxPassengers;
-        this.numPassengers = 0;
-        passengerList = new ArrayList<>();
-        this.gate = gate;
+    public Southwest() {
+        this.airlineName = "Southwest Airlines";
+        this.message = "Southwest Airlines is proud to offer flights to Purdue University. " +
+                "We are happy to offer free inflight WiFi, as well as amazing snacks.";
+        this.flightNumber = "SW 18000";
+        this.numberOfSeats = 30;
+        // Mock Passenger list
+        passengerStrings = new ArrayList<>();
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public String getAirlineName() {
+        return this.airlineName;
     }
 
-    public String getAmenities() {
-        return amenities;
+    public static String getMessage() {
+        return message;
     }
 
-    public int getMaxPassengers() {
-        return maxPassengers;
+    @Override
+    public String getFlightNumber() {
+        return this.flightNumber;
     }
 
-    public int getNumPassengers() {
-        return numPassengers;
+    @Override
+    public int numberOfSeats() {
+        return this.numberOfSeats;
     }
 
-    public ArrayList<Passenger> getPassengerList() {
-        return this.passengerList;
+    public void setPassengerStrings(ArrayList<String> passengerStrings) {
+        this.passengerStrings = passengerStrings;
     }
 
-    public Gate getGate() {
-        return this.gate;
+    public ArrayList<String> getPassengerStrings() {
+        return this.passengerStrings;
     }
 
-    public void addPassenger(Passenger passenger) {
-        passengerList.add(passenger);
-        numPassengers++;
+    public void addToPassengerStrings(String passenger) {
+        this.passengerStrings.add(passenger);
     }
 
-    public void removePassenger(Passenger passenger) {
-        passengerList.remove(passenger);
-        numPassengers--;
-    }
-
-    public boolean isFull() {
-        return this.numPassengers == this.maxPassengers;
+    public String toString() {
+        return "Southwest";
     }
 }
-
